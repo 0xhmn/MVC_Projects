@@ -113,6 +113,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CeMba\CeMbaAreaRegistration.cs" />
     <Compile Include="Areas\CeMba\Controllers\PagesController.cs" />
+    <Compile Include="Areas\CeMba\Models\CeMbaEducationViewModel.cs" />
     <Compile Include="Areas\Landing\Controllers\ListingController.cs" />
     <Compile Include="Areas\Landing\LandingAreaRegistration.cs" />
     <Compile Include="Controllers\BaseProgramPagesController.cs" />
@@ -180,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\CeMba\Models\" />
     <Folder Include="Areas\CeMba\Views\Shared\" />
     <Folder Include="Areas\Landing\Models\" />
     <Folder Include="Views\BaseProgramPages\" />

@@ -1,30 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Ctrl_Test.Models.ViewModels.Interfaces;
 
 namespace Ctrl_Test.Controllers
 {
 	[RouteArea]
-    public abstract class BaseProgramPagesController : Controller
-    {
+    public abstract class BaseProgramPagesController<TEducationViewModel> : Controller
+        where TEducationViewModel : IEverythingShouldHave<TEducationViewModel>
+	{
 		/**
-		 * for some reason this action is called
-		 * on root (~/)
+		 * to make 'RouteArea' works, we need to make this class as 'abstract'
 		 */
         [Route]
         public ActionResult Index()
         {
-	        // return Content("sfsaf");
-	        // return View("~/Views/Pages/Index.cshtml");
             return View();
         }
 
-		[Route("about")]
-		public ActionResult About()
-		{
-			return View();
-		}
+	    [HttpGet]
+	    [AllowAnonymous]
+	    [Route("term/{termSlug}")]
+        // cemba/term/summer-2014
+        public ActionResult Start(string termSlug)
+	    {
+	        return Content(termSlug);
+	    }
+
+	    [HttpGet]
+	    [AllowAnonymous]
+	    [Route("term/{termSlug}/education")]
+	    public ActionResult EducationUpdate(string termSlug)
+	    {
+	        
+	    }
     }
 }
