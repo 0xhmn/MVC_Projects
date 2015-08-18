@@ -13,9 +13,10 @@ namespace Ctrl_Test
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+			routes.MapMvcAttributeRoutes(new CustomDirectRouteProvider());
+
 			routes.LowercaseUrls = true;
 			// passing CustomDirectRouteProvider so we can have inheritance in our controllers
-			routes.MapMvcAttributeRoutes(new CustomDirectRouteProvider());
 
 
 			// everything with attributes
@@ -24,6 +25,7 @@ namespace Ctrl_Test
 			//	url: "Dashboard/{action}",
 			//	defaults: new {area="Dashboard", controller = "Dashboard", action = "Index"}
 			//);
+
 		}
 	}
 }

@@ -111,12 +111,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Blog\BlogAreaRegistration.cs" />
-    <Compile Include="Areas\Dashboard\Controllers\DashboardController.cs" />
-    <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
-    <Compile Include="Areas\Blog\Controllers\BlogController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Areas\CeMba\CeMbaAreaRegistration.cs" />
+    <Compile Include="Areas\CeMba\Controllers\PagesController.cs" />
+    <Compile Include="Areas\Landing\Controllers\ListingController.cs" />
+    <Compile Include="Areas\Landing\LandingAreaRegistration.cs" />
+    <Compile Include="Controllers\BaseProgramPagesController.cs" />
     <Compile Include="Extentions\CustomDirectRouteProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,12 +144,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Areas\Blog\Views\web.config" />
-    <Content Include="Areas\Dashboard\Views\web.config" />
-    <Content Include="Areas\Blog\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Blog\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Blog\Views\Blog\ShowArchive.cshtml" />
-    <Content Include="Areas\Dashboard\Views\Dashboard\GetDashboard.cshtml" />
+    <Content Include="Areas\CeMba\Views\web.config" />
+    <Content Include="Areas\Landing\Views\web.config" />
+    <Content Include="Areas\Landing\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Landing\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Landing\Views\Listing\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -176,16 +174,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Pages\About.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Blog\Models\" />
-    <Folder Include="Areas\Dashboard\Models\" />
-    <Folder Include="Areas\Dashboard\Views\Shared\" />
-    <Folder Include="Views\Bloag\" />
+    <Folder Include="Areas\CeMba\Models\" />
+    <Folder Include="Areas\CeMba\Views\Shared\" />
+    <Folder Include="Areas\Landing\Models\" />
+    <Folder Include="Views\BaseProgramPages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
