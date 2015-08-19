@@ -121,6 +121,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Gizmo.cs" />
     <Compile Include="Models\ViewModels\BaseEducationViewModel.cs" />
     <Compile Include="Models\ViewModels\BaseSchoolViewModel.cs" />
     <Compile Include="Models\ViewModels\BaseUniversityViewModel.cs" />
@@ -150,6 +151,7 @@
     <Content Include="Areas\Landing\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Landing\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Landing\Views\Listing\Index.cshtml" />
+    <Content Include="Areas\Landing\Views\Listing\Gizmo.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

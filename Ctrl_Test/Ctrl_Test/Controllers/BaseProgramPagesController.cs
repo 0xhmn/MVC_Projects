@@ -30,7 +30,7 @@ namespace Ctrl_Test.Controllers
 	    [Route("term/{termSlug}/education")]
 	    public ActionResult EducationUpdate(string termSlug)
 	    {
-	        
+	        return Content("not implemented yet");
 	    }
     }
 }

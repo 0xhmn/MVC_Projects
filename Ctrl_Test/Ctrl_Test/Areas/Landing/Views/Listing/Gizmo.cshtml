@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Ctrl_Test.Models.Gizmo>
+@{
+    ViewBag.Title = "Gizmo";
+}
+
+<h2>showing gizmo list</h2>
+<p>This is a @ViewBag.SyncOrAsync page</p>
+
+@Html.DisplayNameFor(m => m.Name)
+<br />
+
+@foreach (var item in Model)
+{
+    <p>
+        @Html.DisplayFor(m => item.Id) : @Html.DisplayFor(m =>item.Name)
+        @item.Id : @item.Name
+    </p>
+}
