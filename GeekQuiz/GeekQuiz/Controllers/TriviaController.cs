@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -13,7 +14,7 @@ namespace GeekQuiz.Controllers
     /// based on WebApiConfig the api url is "api/{controller}/{id}"
     /// so for this controller: api/trivia
     /// </summary>
-    // [Authorize]
+    [Authorize]
     public class TriviaController : ApiController
     {
         private TriviaContext db = new TriviaContext();
@@ -44,6 +45,7 @@ namespace GeekQuiz.Controllers
         }
 
         // GET api/Trivia
+        [AllowAnonymous]
         [ResponseType(typeof(TriviaQuestion))]
         public async Task<IHttpActionResult> Get()
         {
@@ -71,6 +73,7 @@ namespace GeekQuiz.Controllers
         }
 
         // POST api/Trivia
+        [AllowAnonymous]
         [ResponseType(typeof(TriviaAnswer))]
         public async Task<IHttpActionResult> Post(TriviaAnswer answer)
         {
