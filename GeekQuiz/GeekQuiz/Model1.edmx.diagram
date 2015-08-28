@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9352217d89634490b2fe0148267b5588" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="4.125" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TriviaAnswer" Width="1.5" PointX="9" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TriviaOption" Width="1.5" PointX="5.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TriviaQuestion" Width="1.5" PointX="3.125" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_dbo_TriviaAnswers_dbo_TriviaOptions_QuestionId_OptionId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_TriviaOptions_dbo_TriviaQuestions_QuestionId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

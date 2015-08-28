@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
+using System.Web.Http.Description;
+using System.Web.Http.Results;
 using System.Web.Mvc;
+using GeekQuiz.Models;
 
 namespace GeekQuiz.Controllers
 {
-    // [Authorize]
+    [System.Web.Mvc.Authorize]
     public class HomeController : Controller
     {
+        //db
+        private TriviaContext db = new TriviaContext();
+
         public ActionResult Index()
         {
             return View();
@@ -27,5 +35,6 @@ namespace GeekQuiz.Controllers
 
             return View();
         }
+
     }
 }

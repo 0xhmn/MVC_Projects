@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -10,8 +6,14 @@ using GeekQuiz.Models;
 using System.Data.Entity;
 using System.Threading;
 
+
 namespace GeekQuiz.Controllers
 {
+    /// <summary>
+    /// based on WebApiConfig the api url is "api/{controller}/{id}"
+    /// so for this controller: api/trivia
+    /// </summary>
+    // [Authorize]
     public class TriviaController : ApiController
     {
         private TriviaContext db = new TriviaContext();
