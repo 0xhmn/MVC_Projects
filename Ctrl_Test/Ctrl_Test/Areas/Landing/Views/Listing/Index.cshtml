@@ -1,0 +1,13 @@
+﻿@model List<Ctrl_Test.Models.ViewModels.ProgramSelectViewModel>
+@{
+    ViewBag.Title = "Applications";
+}
+
+<div class="row">
+    @foreach (var program in Model)
+    {
+        <div class="col-sm-3">
+            @Html.Partial("~/Areas/Landing/Views/Listing/_Program.cshtml", program)
+        </div>
+    }
+</div>

@@ -1,0 +1,34 @@
+﻿@using Microsoft.Ajax.Utilities
+@using Newtonsoft.Json
+@model Ctrl_Test.Models.ViewModels.ProgramSelectViewModel
+
+<div class="panel panel-primary" ng-controller="AppSelectCtrl">
+    <div class="panel-heading">
+        @Model.Name
+    </div>
+    @if (Model.OpenTerms.Count > 0)
+    {
+        <p>We go the the Model from db, then convert them to Json (key, val) and do the angular thing</p>
+        var terms = JsonConvert.SerializeObject(Model.OpenTerms); // ["Summer 2032","Fall 2032"] -- or like Max convet it to dictionary with key/val and then json (?)
+
+        <label>Select a Term:</label>
+        <div class="form-group">
+            <select ng-model="selections.termName" class="form-control">
+                <option ng-repeat="item in @terms" value="{{item}}">{{item}}</option>
+            </select>
+        </div>
+    }else {
+        <p>
+            @Model.Name doesn't have any open term!
+        </p>
+    }
+    
+    <!--ng-if vs ng-show-->
+    <p>
+        {{selections.termName}}
+    </p>
+    <div class="panel" ng-if="selections.termName != 'Fall 2032'">
+        <p>footer</p>
+    </div>
+
+</div>

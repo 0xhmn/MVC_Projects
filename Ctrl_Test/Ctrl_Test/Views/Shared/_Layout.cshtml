@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="onlineApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-sanitize.min.js"></script>
+    <!-- ANGULAR APP STUFF:-->
+    @Scripts.Render("~/js/onlineApp")
+
+    @Styles.Render("~/css/vendor")
+    @Styles.Render("~/css/onlineApp")
+</head>
+<body class="body-onlineapp">
+    <br />
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Applicationss</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
