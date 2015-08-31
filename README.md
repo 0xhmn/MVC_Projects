@@ -1,2 +1,2 @@
 # using Angular on a sample MVC project
-- AJAX stuff
+- a sample code from admission application app
