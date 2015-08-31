@@ -1,0 +1,52 @@
+﻿<form class="form-horizontal" role="form">
+    <div class="col-sm-6">
+        <legend>Person Basic Info</legend>
+        <div class="form-group">
+
+            <label for="personId" class="col-sm-3 control-label">Person Id</label>
+            <div class="col-sm-9">
+                <input type="text" id="personId" name="personId"
+                       ng-model="PersonId" class="form-control" readonly="readonly" />
+            </div>
+            
+            <label for="personId" class="col-sm-3 control-label">Person Id</label>
+            <div class="col-sm-9">
+                <input type="text" id="Id" name="Id"
+                       ng-model="Id" class="form-control" />
+            </div>
+
+            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="firstName" name="firstName"
+                       ng-model="FirstName" class="form-control" />
+            </div>
+            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="lastName" name="lastName"
+                       ng-model="LastName" class="form-control" />
+            </div>
+
+            <label for="gender" class="col-sm-3 control-label">Gender</label>
+            <div class="col-sm-9">
+                <select id="gender" name="gender" class="form-control"
+                        ng-model="selectedGender"
+                        ng-options="g for g in gender"></select>
+            </div>
+
+            <label for="age" class="col-sm-3 control-label">Age</label>
+            <div class="col-sm-9">
+                <input type="text" id="age" name="age"
+                       ng-model="Age" class="form-control" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-sm-offset-3 col-sm-9">
+        <input type="button" class="btn btn-default" value="Cancel"
+               ng-click="cancelForm()" />
+        <input type="button" class="btn btn-primary" value="Submit"
+               ng-click="submitForm()" />
+    </div>
+
+</form>
